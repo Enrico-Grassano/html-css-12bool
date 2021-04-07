@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Common */
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.debug .container {
+    height: 100%;
+    min-height: 200px;
+}
+[class*="col-"] {
+    float: left;
+    width: calc(100% / 12);
+}
+.debug  [class*="col-"] {
+    height: 100%;
+    min-height: 200px;
+    background-color: #ffc0cb;
+    border: 1px solid black;
+}
+
+/* Container-2 */
+.cont-2 .col-1 {
+    width: 100%;
+    min-height: 200px;
+    background-color: #ffc0cb;
+    border: 1px solid black;
+}
+
+/* Container-3 */
+.cont-3 .col-1 {
+    width: calc((100% / 12)*8);
+}
+.cont-3 .col-2,
+.cont-3 .col-3 {
+    width: calc((100% / 12)*2);
+}
+
+/* Container-4 */
+.cont-4 .col-1,
+.cont-4 .col-5 {
+    width: calc((100% / 12)*1);
+}
+.cont-4 .col-2,
+.cont-4 .col-3 {
+    width: calc((100% / 12)*2);
+}
+.cont-4 .col-4 {
+    width: calc((100% / 12)*6);
+}
+
+/* Container-5 */
+.cont-5 [class*="col-"] {
+    width: calc((100% / 12)*6);
+}
+
+/* Sub-containers */
+.sub-cont-1, 
+.sub-cont-2 {
+    padding: 5px;
+}
+.sub-cont-1 [class*="col-"] {
+    background-color: lightcoral;
+    border: 2px solid white;
+}
+.sub-cont-2 [class*="col-"] {
+    width: calc((100% / 12)*6);
+}
+.sub-cont-2 [class*="col-"] {
+    background-color: lightcoral;
+    border: 2px solid white;
+}
+.sub-cont-1 .nested-col-1,
+.sub-cont-1 .nested-col-2 {
+    width: calc((100% / 12)*2);
+}
+.sub-cont-1 .nested-col-3 {
+    width: calc((100% / 12)*8);
+}
